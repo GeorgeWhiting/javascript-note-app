@@ -4,7 +4,9 @@
   };
 
   List.prototype.addNote = function(note){
-    this.notes.push(note);
+    if(note instanceof Note) {
+      this.notes.push(note);
+    }
   };
 
   exports.List = List;
