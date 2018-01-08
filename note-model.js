@@ -4,7 +4,7 @@
   };
 
   Note.prototype.readnote = function(){
-    return somethings;
+    return this.text;
   };
 
 exports.Note = Note;
