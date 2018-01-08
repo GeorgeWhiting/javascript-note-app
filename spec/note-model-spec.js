@@ -10,7 +10,7 @@ function testInitializesWithText(){
 
 function returnsNoteText(){
   var note = new Note();
-  assert.isTrue(note.text === note.readnote(), "returns note content");
+  assert.isTrue(note.text === note.readnote(), "Returns the content of the note");
 };
 
 

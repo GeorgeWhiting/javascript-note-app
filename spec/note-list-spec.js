@@ -17,6 +17,15 @@ function testOnlyNotesAllowed(){
 };
 
 
+function returnsNotesList(){
+  var note1 = new Note("Note 1");
+  var note2 = new Note("Note 2");
+  var list = new List();
+  list.addNote(note1);
+  list.addNote(note2);
+  assert.isTrue(list.returnAllNotes() === list.notes, "Returns the list of notes");
+};
+
 
 
 // -----------------------------
@@ -25,3 +34,4 @@ function testOnlyNotesAllowed(){
 testInitializeEmptyList();
 testAddNoteToList();
 testOnlyNotesAllowed();
+returnsNotesList();
