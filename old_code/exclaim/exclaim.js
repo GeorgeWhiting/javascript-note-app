@@ -10,7 +10,7 @@
   };
 
   exports.test = exclaim;
-  exports.test <= exclaim2;
+  exports.test2 = exclaim2;
 
 })(this)
 
