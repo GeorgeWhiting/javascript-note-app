@@ -26,7 +26,12 @@ function returnsNotesList(){
   assert.isTrue(list.returnAllNotes() === list.notes, "Returns the list of notes");
 };
 
+function testNoteCreationAndAddToList(){
+  var list = new List();
+  list.createAndAdd("A note");
+  assert.isTrue(list.notes[0].readNote() === "A note", "Creates and adds a note to the list");
 
+};
 
 // -----------------------------
 // calling the test functions
@@ -35,3 +40,4 @@ testInitializeEmptyList();
 testAddNoteToList();
 testOnlyNotesAllowed();
 returnsNotesList();
+testNoteCreationAndAddToList();

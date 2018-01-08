@@ -8,10 +8,11 @@ function testInitializesWithText(){
   assert.isTrue(note.text === 'This is a new note', "Initialises with a custom note")
 };
 
-function returnsNoteText(){
+function testReturnsNoteText(){
   var note = new Note();
-  assert.isTrue(note.text === note.readnote(), "Returns the content of the note");
+  assert.isTrue(note.text === note.readNote(), "Returns the content of the note");
 };
+
 
 
 // -----------------------------
@@ -19,4 +20,4 @@ function returnsNoteText(){
 
 testInitializesWithDefault();
 testInitializesWithText();
-returnsNoteText();
+testReturnsNoteText();
