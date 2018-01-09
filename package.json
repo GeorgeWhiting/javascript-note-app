@@ -1,0 +1,23 @@
+{
+  "name": "js-notes-app",
+  "version": "1.0.0",
+  "description": "note",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeorgeWhiting/javascript-note-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeorgeWhiting/javascript-note-app/issues"
+  },
+  "homepage": "https://github.com/GeorgeWhiting/javascript-note-app#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^0.10.0"
+  }
+}
