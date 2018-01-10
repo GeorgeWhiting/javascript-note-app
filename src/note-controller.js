@@ -3,8 +3,13 @@
   var Controller = function(list = new List()){
     this.list = list
     this.list.createAndAdd("Fav drink: pesto");
-     this.view = new View(list);
-     document.getElementById("app").innerHTML = this.view.returnHTML();
+    this.list.createAndAdd("something else");
+
+    this.view = new View(list);
+  };
+
+  Controller.prototype.printList = function(elementID){
+    document.getElementById(elementID).innerHTML = this.view.returnHTML();
   };
 
   exports.Controller = Controller;
@@ -13,4 +18,5 @@
 
 window.onload = function() {
   controller = new Controller();
+  controller.printList("app");
 };
