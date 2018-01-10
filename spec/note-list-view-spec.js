@@ -28,6 +28,13 @@ function testHTMLconvertManyNotes(){
   assert.isTrue(view.returnHTML() === "<ul><li><div>Note 1</div></li><li><div>Note 2</div></li></ul>", "Converts a many note list to HTML");
 };
 
+function testOnlyTwentyCharsDisplayed(){
+  var list = new List();
+  list.createAndAdd("abcdefghijklmnopqrstuvwxyz");
+  var view = new View(list);
+  assert.isTrue(view.returnHTML() === "<ul><li><div>abcdefghijklmnopqrst</div></li></ul>", "List only displays the first 20 chars of a note")
+};
+
 
 // -----------------------------
 
@@ -35,3 +42,4 @@ testInitializeWithList();
 testHTMLconvertNoNotes();
 testHTMLconvertOneNote();
 testHTMLconvertManyNotes();
+testOnlyTwentyCharsDisplayed();

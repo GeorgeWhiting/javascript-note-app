@@ -7,9 +7,6 @@ function testInitialize(){
 function testInnerHTML(){
 
   var FakeList = function(){
-    // FakeList.prototype.returnAllNotes = function(){
-    //   return "[Fav drink: pesto]";
-    // };
   };
 
   var FakeView = function(){
@@ -30,5 +27,5 @@ function testInnerHTML(){
 
 // -----------------------------
 
-testInitialize();
-testInnerHTML();
+  testInitialize();
+  testInnerHTML();
