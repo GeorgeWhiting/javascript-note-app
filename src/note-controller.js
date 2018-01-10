@@ -1,11 +1,8 @@
 (function(exports){
 
-  var Controller = function(list = new List()){
-    this.list = list
-    this.list.createAndAdd("Fav drink: pesto");
-    this.list.createAndAdd("something else");
-
-    this.view = new View(list);
+  var Controller = function(list = new List(), view = new View(list)){
+    this.list = list;
+    this.view = view;
   };
 
   Controller.prototype.printList = function(elementID){
@@ -18,5 +15,6 @@
 
 window.onload = function() {
   controller = new Controller();
+  controller.list.createAndAdd("Fav drink: pesto");
   controller.printList("app");
 };
