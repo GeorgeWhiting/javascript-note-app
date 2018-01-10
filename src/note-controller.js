@@ -15,5 +15,6 @@
 
 window.onload = function() {
   controller = new Controller();
+  controller.list.createAndAdd("Fav drink: pesto");
   controller.printList("app");
 };

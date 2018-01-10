@@ -13,10 +13,15 @@ function testReturnsNoteText(){
   assert.isTrue(note.text === note.readNote(), "Returns the content of the note");
 };
 
-
+function testNoteID(){
+  var note = new Note();
+  console.log(note.id);
+  assert.isTrue(note.id === 3, 'Assigns each note a unique ID');
+};
 
 // -----------------------------
 
 testInitializesWithDefault();
 testInitializesWithText();
 testReturnsNoteText();
+testNoteID();
