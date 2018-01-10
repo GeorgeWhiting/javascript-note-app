@@ -16,7 +16,6 @@ function testReturnsNoteText(){
 
 
 // -----------------------------
-// calling the test functions
 
 testInitializesWithDefault();
 testInitializesWithText();

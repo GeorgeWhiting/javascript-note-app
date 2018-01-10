@@ -34,7 +34,6 @@ function testNoteCreationAndAddToList(){
 };
 
 // -----------------------------
-// calling the test functions
 
 testInitializeEmptyList();
 testAddNoteToList();

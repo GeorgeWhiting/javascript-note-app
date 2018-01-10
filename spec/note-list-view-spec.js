@@ -30,7 +30,6 @@ function testHTMLconvertManyNotes(){
 
 
 // -----------------------------
-// calling the test functions
 
 testInitializeWithList();
 testHTMLconvertNoNotes();
