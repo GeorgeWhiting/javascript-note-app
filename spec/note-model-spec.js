@@ -15,7 +15,6 @@ function testReturnsNoteText(){
 
 function testNoteID(){
   var note = new Note();
-  console.log(note.id);
   assert.isTrue(note.id === 3, 'Assigns each note a unique ID');
 };
 

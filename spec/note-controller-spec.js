@@ -10,9 +10,9 @@ function testInnerHTML(){
   };
 
   var FakeView = function(){
-    FakeView.prototype.returnHTML = function(){
-      return "<ul><li><div>Fav drink: pesto</div></li></ul>";
-    };
+  };
+  FakeView.prototype.returnHTML = function(){
+    return "<ul><li><div>Fav drink: pesto</div></li></ul>";
   };
 
   var list = new FakeList();
