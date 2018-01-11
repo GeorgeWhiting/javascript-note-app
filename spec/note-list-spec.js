@@ -4,22 +4,25 @@ function testInitializeEmptyList(){
 };
 
 function testAddNoteToList(){
+
+  var FakeNote = function(text){
+    this.text = text;
+  };
+
   var list = new List();
-  var note = new Note();
+  var note = new FakeNote();
   list.addNote(note);
   assert.isTrue(list.notes[0] === note, "Add a note to the list");
 };
 
-function testOnlyNotesAllowed(){
-  var list = new List();
-  list.addNote("hello");
-  assert.isTrue(list.notes[0] !== "hello", "Cannot add a non-note object to the list");
-};
-
-
 function returnsNotesList(){
-  var note1 = new Note("Note 1");
-  var note2 = new Note("Note 2");
+
+  var FakeNote = function(text){
+    this.text = text;
+  };
+
+  var note1 = new FakeNote("Note 1");
+  var note2 = new FakeNote("Note 2");
   var list = new List();
   list.addNote(note1);
   list.addNote(note2);
@@ -37,6 +40,5 @@ function testNoteCreationAndAddToList(){
 
 testInitializeEmptyList();
 testAddNoteToList();
-testOnlyNotesAllowed();
 returnsNotesList();
 testNoteCreationAndAddToList();

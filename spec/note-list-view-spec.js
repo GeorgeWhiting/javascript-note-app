@@ -11,7 +11,16 @@ function testHTMLconvertNoNotes(){
 };
 
 function testHTMLconvertOneNote(){
-  var note1 = new Note("Note 1");
+
+  var FakeNote = function(text){
+    this.text = text;
+
+    FakeNote.prototype.readNote = function(){
+      return text;
+    };
+  };
+
+  var note1 = new FakeNote("Note 1");
   var list = new List();
   list.addNote(note1);
   var view = new View(list);
@@ -19,8 +28,16 @@ function testHTMLconvertOneNote(){
 };
 
 function testHTMLconvertManyNotes(){
-  var note1 = new Note("Note 1");
-  var note2 = new Note("Note 2");
+
+  var FakeNote = function(text){
+    this.text = text;
+    FakeNote.prototype.readNote = function(){
+      return this.text;
+    };
+  };
+
+  var note1 = new FakeNote("Note 1");
+  var note2 = new FakeNote("Note 2");
   var list = new List();
   list.addNote(note1);
   list.addNote(note2);

@@ -4,9 +4,7 @@
   };
 
   List.prototype.addNote = function(note){
-    if(note instanceof Note) {
-      this.notes.push(note);
-    }
+    this.notes.push(note);
   };
 
   List.prototype.returnAllNotes = function(){
