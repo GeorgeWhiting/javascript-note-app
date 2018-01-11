@@ -1,7 +1,8 @@
 (function(exports) {
 
+
   var NoteId = function(){
-    this.id = 0;
+    //this.id = 0;
   };
 
   NoteId.prototype.init = function(){
@@ -17,4 +18,17 @@
   };
 
 exports.NoteId = NoteId;
+
+
+  // var id = 0;
+  //
+  // function getNextId() {
+  //   return id++;
+  // }
+  //
+  // exports.idGenerator = {
+  //   getNextId: getNextId
+  // }
+
+
 })(this);
