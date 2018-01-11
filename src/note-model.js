@@ -1,10 +1,13 @@
 (function(exports) {
 
-  var id = 0;
+//  var noteId = new NoteId();
+  NoteId.prototype.init();
 
   var Note = function(text = 'My favourite language is Javascript'){
     this.text = text;
-    this.id = id++;
+    this.id = NoteId.prototype.getId();
+    console.log(this.id);
+    NoteId.prototype.increment();
   };
 
   Note.prototype.readNote = function(){
